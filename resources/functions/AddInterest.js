@@ -4,7 +4,8 @@ async function addInterest(db, information) {
     interestServing[`interest-serving.${information.ministry}`] = {
         name: information.name,
         details: information.details,
-        assigned: 0
+        assigned: 0,
+        location: information.location
     }
 
     const result = await db.collection("Volunteers")
